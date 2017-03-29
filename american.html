@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1, user-scalable=no">
+
+	<!-- jQuery -->
+    <script src="js/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+
+
+	<!-- Parellax scrolling script -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- <script src="js/scrip.js"></script> -->
+    <script src="js/jquery.nicescroll.js"></script>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+   	<!-- stellar initiate -->
+  <!--   <script type="text/javascript">
+    	$(document).ready(function() {
+
+    		$(window).stellar();
+    	});
+    </script> -->
+	<style type="text/css">
+		body {
+			font-family: 'Noto Sans KR';
+		}
+	</style>
+</head>
+
+<body>
+<!--  style="overflow-x:hidden; overflow-y:auto;" -->
+		<div id="nav">
+			<div class="logo_images">
+				<a href="index.html"><img src="images/logo2.png" alt="logo"></a>
+			</div>
+			<!-- nav_size -->
+			<div class="dropdown">
+				<button>Menu</button>
+				<!-- side_header_menu -->
+				<ul class="dropdown_list">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="american.html" class="on">American</a></li>
+	                <li><a href="#">Mild</a></li>
+	                <li><a href="#">European</a></li>
+	                <li><a href="espresso.html">Espresso</a></li>
+	            </ul>
+
+
+ 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    var Dropdown = (function($) {
+
+        var $body = $('body'),
+            $dropdown = $body.find('.dropdown'),
+            $trigger = $dropdown.find('button'),
+            $list = $dropdown.find('ul'),
+            $firstLink = $list.find('li:first a'),
+            $lastLink = $list.find('li:last a');
+
+        var init = function() {
+            ariaSetup();
+            bindEvents();
+        }
+
+        var ariaSetup = function() {
+            var listId = $list.attr('id');
+
+            $trigger.attr({
+                'aria-expanded': 'false',
+                'aria-controls': listId
+            });
+
+            $list.attr({
+                'aria-hidden': true
+            });
+        }
+
+        var bindEvents = function() {
+            $trigger.on('click', toggleDropdown);
+
+            $firstLink.on('keydown', function() {
+                if (event.which === 9 && event.shiftKey === false) {
+                    return;
+                } else if (event.which === 9 && event.shiftKey === true) {
+                    toggleDropdown();
+                }
+            });
+
+            $lastLink.on('keydown', function() {
+                if (event.shiftKey) return;
+                toggleDropdown();
+            });
+        }
+
+        var toggleDropdown = function() {
+            var hidden = $list.attr('aria-hidden') === 'true' ? false : true,
+                expanded = !hidden;
+
+            $trigger.attr('aria-expanded', expanded);
+            $list.attr('aria-hidden', hidden);
+        }
+
+        return {
+            init: init
+        }
+    })(jQuery);
+    Dropdown.init();
+    </script>
+
+	            <ul class="side_header_sns">
+	                <li><a href="#"><img src="images/facebook.png"></a></li>
+	                <li><a href="#"><img src="images/twitter.png"></a></li>
+	                <li><a href="#"><img src="images/googleplus.png"></a></li>
+	                <li><a href="#"><img src="images/insta.png"></a></li>
+	            </ul>
+            </div>	<!-- End of nav_size -->
+        </div>	<!-- End of nav -->
+
+
+
+
+        <!-- Main contents -->
+        <div class="contents">
+
+			<!-- parallax scrolling_1 -->
+			<!-- article 1 -->
+			<section class="photo_container_1 americano_1" data-stellar-background-ratio="0.5">
+				<div class="american_article_1">
+					<h2>Americano</h2>
+					<h3>All you need to know to get started in Coffee.</h3>
+					<a href="#" class="btn">Learn More</a>
+				</div>
+			</section>
+
+			<section class="americano_wrapper">
+				<div class="american_at_1_img">
+					<img src="images/am_at1.png">
+				</div>
+				<div class="american_at_1_at">
+					<h2>Caffè Americano or Americano</h2>
+					<h3>(shortened from Italian: caffè americano or American Spanish: café americano, literally American coffee)</h3>
+					<p>is a style of coffee prepared by brewing espresso with added hot water, giving it a similar strength to, but different flavor from, drip coffee.</p>
+					<p>The strength of an Americano varies with the number of shots of espresso and the amount of water added. </p>
+				</div>
+			</section>
+			<!-- end of article 1 -->
+
+			<!-- article 2 -->
+			<section class="photo_container_2 americano_2" data-stellar-background-ratio="0.5">
+				<div class="american_article_2">
+					<h2>The drink consists of a single <Br>or double-shot of espresso brewed with added water.</h2>
+					<h3>Long Black is an Australasian term for an Americano <br> (in contrast to Short Black for espresso)</h3>
+				</div>
+			</section>
+			<!-- Ends of article 2 -->
+
+
+
+			<!-- article 3 : -->
+            <div class="article_3">
+
+                <div class="at3_write">
+                    <h2>Lastes Features</h2>
+                    <h3>Expert advice and in-depth features for a coffee life</h3>
+                </div>
+
+				<div class="post_images">
+	                <!-- image post start -->
+	                <div class="post_1">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post1.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Senator <span>Bornie Sanders</span></h2>
+	                                <p>Senator Bernie Sanders, after a loss in New York and with tough contests ahead,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_1 -->
+
+	                <div class="post_2">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post2.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>president <span>Patricio</span></h2>
+	                                <p>Patricio Aylwin, President Who Guided Chile to Democracy, Dies at 97y</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_2 -->
+
+	                <div class="post_3">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post3.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Ecuador <span>Hit by Quake</span></h2>
+	                                <p>New York Times journalists accompanied an aid mission to a devastated area without water,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_3 -->
+
+	                <div class="post_4">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post4.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Brazil debate<span>Legal Question</span></h2>
+	                                <p>There is broad agreement that President Dilma Rousseff’s administration employed budgetary tricks,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_4 -->
+
+	                <div class="post_5">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post5.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Obama and Salman <span>meet Saudi</span></h2>
+	                                <p>A meeting in Riyadh that lasted more than two hours was said to be cordial</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_5 -->
+
+	                <div class="post_6">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post6.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Senator <span>May back 9/11 Lawsuits</span></h2>
+	                                <p>Senator Lindsey Graham, Republican of South Carolina,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_6 -->
+	            </div>
+	            <!-- End of post_images -->
+            </div>
+            <!-- End of article_3 -->
+
+
+        </div>
+        <!-- End of main contents -->
+
+
+        <div class="footer">
+            <div class="footer_logo">
+                <p><a href="#"><img src="images/logo.png" alt="logo"></a></p>
+            </div>
+
+            <ul class="footer_sns_2">
+                <li class="f_1"><a href="#"><img src="images/facebook.png"></a></li>
+                <li class="f_2"><a href="#"><img src="images/twitter.png"></a></li>
+                <li class="f_3"><a href="#"><img src="images/googleplus.png"></a></li>
+                <li class="f_4"><a href="#"><img src="images/insta.png"></a></li>
+            </ul>
+
+            <div class="copy">
+                <p>Copyright &copy; 2016 | All Right Reserved</p>
+            </div>
+        </div>
+        <!-- End of footer -->
+
+</div>
+
+
+</body>
+
+</html>

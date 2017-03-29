@@ -1,0 +1,10 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body {
+	font-family: 'Walkway UltraBold';
+	letter-spacing: .2rem;
+}

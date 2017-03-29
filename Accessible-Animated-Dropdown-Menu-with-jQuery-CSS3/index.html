@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Aria Dropdown Demo</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+
+    <div class="dropdown">
+        <button>Dropdown Menu</button>
+        <ul id="dropdown-list">
+            <li><a href="">Menu Item 1</a></li>
+            <li><a href="">Menu Item 2</a></li>
+            <li><a href="">Menu Item 3</a></li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    var Dropdown = (function($) {
+
+        var $body = $('body'),
+            $dropdown = $body.find('.dropdown'),
+            $trigger = $dropdown.find('button'),
+            $list = $dropdown.find('ul'),
+            $firstLink = $list.find('li:first a'),
+            $lastLink = $list.find('li:last a');
+
+        var init = function() {
+            ariaSetup();
+            bindEvents();
+        }
+
+        var ariaSetup = function() {
+            var listId = $list.attr('id');
+
+            $trigger.attr({
+                'aria-expanded': 'false',
+                'aria-controls': listId
+            });
+
+            $list.attr({
+                'aria-hidden': true
+            });
+        }
+
+        var bindEvents = function() {
+            $trigger.on('click', toggleDropdown);
+
+            $firstLink.on('keydown', function() {
+                if (event.which === 9 && event.shiftKey === false) {
+                    return;
+                } else if (event.which === 9 && event.shiftKey === true) {
+                    toggleDropdown();
+                }
+            });
+
+            $lastLink.on('keydown', function() {
+                if (event.shiftKey) return;
+                toggleDropdown();
+            });
+        }
+
+        var toggleDropdown = function() {
+            var hidden = $list.attr('aria-hidden') === 'true' ? false : true,
+                expanded = !hidden;
+
+            $trigger.attr('aria-expanded', expanded);
+            $list.attr('aria-hidden', hidden);
+        }
+
+        return {
+            init: init
+        }
+
+    })(jQuery);
+
+    Dropdown.init();
+    </script>
+
+</body>
+
+</html>

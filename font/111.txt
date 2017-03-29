@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans KR Medium'), local('Noto Sans KR Medium'), local('Noto Sans KR Medium');
+    src: url(NotoSansKR-Medium-Hestia.eot);
+    src: url(NNotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(NotoSansKR-Medium-Hestia.otf) format('truetype');
+}
+
+
+	<style type="text/css">
+		body {
+			font-family: 'Noto Sans KR';
+		}

@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1, user-scalable=no">
+
+	<!-- drop down menu section script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+	<style type="text/css">
+		body {
+			font-family: 'Noto Sans KR';
+		}
+	</style>
+</head>
+
+
+<body>
+<!--  style="overflow-x:hidden; overflow-y:auto;" -->
+		<div id="nav">
+			<div class="logo_images">
+				<a href="index.html"><img src="images/logo2.png" alt="logo"></a>
+			</div>
+			<!-- nav_size -->
+			<div class="dropdown">
+				<button>Menu</button>
+				<!-- side_header_menu -->
+				<ul class="dropdown_list">
+	                <li><a href="index.html" class="on">Home</a></li>
+	                <li><a href="american.html">American</a></li>
+	                <li><a href="#">Mild</a></li>
+	                <li><a href="#">European</a></li>
+	                <li><a href="espresso.html">Espresso</a></li>
+	            </ul>
+
+
+ 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+    var Dropdown = (function($) {
+
+        var $body = $('body'),
+            $dropdown = $body.find('.dropdown'),
+            $trigger = $dropdown.find('button'),
+            $list = $dropdown.find('ul'),
+            $firstLink = $list.find('li:first a'),
+            $lastLink = $list.find('li:last a');
+
+        var init = function() {
+            ariaSetup();
+            bindEvents();
+        }
+
+        var ariaSetup = function() {
+            var listId = $list.attr('id');
+
+            $trigger.attr({
+                'aria-expanded': 'false',
+                'aria-controls': listId
+            });
+
+            $list.attr({
+                'aria-hidden': true
+            });
+        }
+
+        var bindEvents = function() {
+            $trigger.on('click', toggleDropdown);
+
+            $firstLink.on('keydown', function() {
+                if (event.which === 9 && event.shiftKey === false) {
+                    return;
+                } else if (event.which === 9 && event.shiftKey === true) {
+                    toggleDropdown();
+                }
+            });
+
+            $lastLink.on('keydown', function() {
+                if (event.shiftKey) return;
+                toggleDropdown();
+            });
+        }
+
+        var toggleDropdown = function() {
+            var hidden = $list.attr('aria-hidden') === 'true' ? false : true,
+                expanded = !hidden;
+
+            $trigger.attr('aria-expanded', expanded);
+            $list.attr('aria-hidden', hidden);
+        }
+
+        return {
+            init: init
+        }
+
+    })(jQuery);
+
+    Dropdown.init();
+    </script>
+99951@jei.com
+	            <ul class="side_header_sns">
+	                <li><a href="#"><img src="images/facebook.png"></a></li>
+	                <li><a href="#"><img src="images/twitter.png"></a></li>
+	                <li><a href="#"><img src="images/googleplus.png"></a></li>
+	                <li><a href="#"><img src="images/insta.png"></a></li>
+	            </ul>
+            </div>	<!-- End of nav_size -->
+        </div>	<!-- End of nav -->
+
+        <!-- Main contents -->
+        <div class="contents">
+
+
+			<div class="images_labels">
+				<!-- 1 -->
+				<div class="grid">
+					<figure class="effect-apollo">
+						<img src="images/m_1.png">
+						<figcaption>
+							<h2>American</h2>
+							<p>this is american style</p>
+							<a href="american.html"></a>
+						</figcaption>
+					</figure>
+				</div>
+
+				<!-- 2 -->
+				<div class="grid">
+					<figure class="effect-apollo">
+						<img src="images/m_2.jpg">
+						<figcaption>
+							<h2>Mild</h2>
+							<p>this is mild style</p>
+							<a href="#"></a>
+						</figcaption>
+					</figure>
+				</div>
+
+				<!-- 3 -->
+				<div class="grid">
+					<figure class="effect-apollo">
+						<img src="images/m_3.png">
+						<figcaption>
+							<h2>European</h2>
+							<p>this is european style</p>
+							<a href="#"></a>
+						</figcaption>
+					</figure>
+				</div>
+
+				<!-- 4 -->
+				<div class="grid">
+					<figure class="effect-apollo">
+						<img src="images/m_4.jpg">
+						<figcaption>
+							<h2>Espresso</h2>
+							<p>this is espresso style</p>
+							<a href="#"></a>
+						</figcaption>
+					</figure>
+				</div>
+
+			</div>	<!-- End of images_labels -->
+
+
+            <!-- article 1 : coffee life -->
+            <div class="article_1">
+                <div class="article_1_image">
+                    <img src="images/article1.jpg" alt="coffee">
+                </div>
+                <div class="at1_write">
+                    <h2>Coffee Life</h2><br>
+                    <h3>Do more of what you love and feel great</h3><br>
+                    <p>The diseases can be caused by viruses as well as DNA mutations, and the data show that the drugs </p><br>
+                    <p>help the immune system to recognize and attack cancers resulting from either cause.</p>
+                </div>
+            </div>
+            <!-- End of article 1 -->
+
+
+            <!-- article 2 : -->
+            <div class="article_2">
+                <div class="article_2_image">
+                    <img src="images/article2.png" alt="image2">
+                </div>
+                <div class="article2_write">
+                    <h2>Dendritic cells (lower left) are special cells that help the immune system recognize the cancer cells and initiate a response. </h2>
+                    <h3>New immunotherapy drugs are showing significant and extended effectiveness against a broadening range of cancers,</h3>
+                </div>
+            </div>
+            <!-- End of article 2 : -->
+
+
+            <!-- article 3 : -->
+            <div class="article_3">
+
+                <div class="at3_write">
+                    <h2>Lastes Features</h2>
+                    <h3>Expert advice and in-depth features for a coffee life</h3>
+                </div>
+
+				<div class="post_images">
+	                <!-- image post start -->
+	                <div class="post_1">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post1.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Senator <span>Bornie Sanders</span></h2>
+	                                <p>Senator Bernie Sanders, after a loss in New York and with tough contests ahead,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_1 -->
+
+	                <div class="post_2">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post2.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>president <span>Patricio</span></h2>
+	                                <p>Patricio Aylwin, President Who Guided Chile to Democracy, Dies at 97y</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_2 -->
+
+	                <div class="post_3">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post3.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Ecuador <span>Hit by Quake</span></h2>
+	                                <p>New York Times journalists accompanied an aid mission to a devastated area without water,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_3 -->
+
+	                <div class="post_4">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post4.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Brazil debate<span>Legal Question</span></h2>
+	                                <p>There is broad agreement that President Dilma Rousseff’s administration employed budgetary tricks,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_4 -->
+
+	                <div class="post_5">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post5.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Obama and Salman <span>meet Saudi</span></h2>
+	                                <p>A meeting in Riyadh that lasted more than two hours was said to be cordial</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_5 -->
+
+	                <div class="post_6">
+	                    <!-- 안쪽에 패딩줘서 간격보임 -->
+	                    <!-- mouseover image-->
+	                    <div class="grid_1">
+	                        <figure class="effect-milo">
+	                            <img src="images/post6.jpg" alt="art">
+	                            <figcaption>
+	                                <h2>Senator <span>May back 9/11 Lawsuits</span></h2>
+	                                <p>Senator Lindsey Graham, Republican of South Carolina,</p>
+	                                <a href="#"></a>
+	                            </figcaption>
+	                        </figure>
+	                    </div>
+	                </div>
+	                <!-- End of post_6 -->
+	            </div>
+	            <!-- End of post_images -->
+            </div>
+            <!-- End of article_3 -->
+
+			<!-- article_4 -->
+			<div class="article_4">
+				<div class="at4_image">
+					<img src="images/article4.jpg">
+				</div>
+				<div class="at4_write">
+					<h2>Long-term survival rates increase for patients treated with immunotherapy</h2>
+					<h3>We are in the midst of a sea change in how we are treating cancer.</h3>
+					<p>said Louis Weiner, director of the Georgetown Lombardi Comprehensive Cancer Center, who wasn’t involved in the studies</p>
+				</div>
+			</div>
+			<!-- End of article_4 -->
+        </div>
+        <!-- End of main contents -->
+
+
+        <div class="footer">
+            <div class="footer_logo">
+                <p><a href="index.html"><img src="images/logo.png" alt="logo"></a></p>
+            </div>
+
+            <ul class="footer_sns_2">
+                <li class="f_1"><a href="#"><img src="images/facebook.png"></a></li>
+                <li class="f_2"><a href="#"><img src="images/twitter.png"></a></li>
+                <li class="f_3"><a href="#"><img src="images/googleplus.png"></a></li>
+                <li class="f_4"><a href="#"><img src="images/insta.png"></a></li>
+            </ul>
+
+            <div class="copy">
+                <p>Copyright &copy; 2016 | All Right Reserved</p>
+            </div>
+        </div>
+        <!-- End of footer -->
+
+</div>
+
+
+
+
+</body>
+
+</html>
